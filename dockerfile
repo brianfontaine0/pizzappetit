@@ -2,8 +2,10 @@ FROM node:20.5-slim
 
 LABEL maintainer="Brian Fontaine <brian.fontaine0@gmail.com>"
 
-COPY . /app
 WORKDIR /app
+
+COPY package.json .
+COPY yarn.lock .
 
 RUN yarn 
 
