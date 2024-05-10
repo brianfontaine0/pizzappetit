@@ -1,14 +1,10 @@
 version: '3.7'
 
 services:
-  adeuxpas-bo:
-    image: briancooped/pizzappetit
+  pizzappetit:
+    image: briancooped/pizzappetit:latest
     ports:
       - "3000:3000"
-    # environment:
-    #   API_URL: "https://api-production.adeuxpas.app/api/v1"
-    #   NEXT_AUTH_SECRET: "KBmwBX3cVoVhGBKfh1ZHOtnqoMDLKYjYPYHtqWXQ3h4="
-    #   NEXTAUTH_URL: "http://192.168.1.131:3000"
     deploy:
       replicas: 1
       restart_policy:
