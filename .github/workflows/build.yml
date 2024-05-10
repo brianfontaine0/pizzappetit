@@ -35,6 +35,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
+            docker stack rm pizzappetit
             rm -f Docker-compose-prod.yml
             docker pull briancooped/pizzappetit:latest
             curl -L https://raw.githubusercontent.com/brianfontaine0/pizzappetit/main/Docker-compose-prod.yml -o Docker-compose-prod.yml
