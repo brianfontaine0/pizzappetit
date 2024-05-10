@@ -5,6 +5,7 @@ LABEL maintainer="Brian Fontaine <brian.fontaine0@gmail.com>"
 WORKDIR /app
 
 COPY package.json yarn.lock ./
+COPY tailwind.config.js ecosystem.config.js postcss.config.js ./
 
 RUN yarn 
 
