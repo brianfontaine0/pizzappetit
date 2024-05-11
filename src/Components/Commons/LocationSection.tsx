@@ -6,7 +6,7 @@ import L from "leaflet";
 
 function LocationSection() {
   return (
-    <section id="location" className="bg-primary h-auto">
+    <section id="location" className="bg-primary/95 h-auto">
       <h1 className="text-4xl text-gray-surface-100 font-Pacifico text-center p-4 py-10">
         Nous trouver
       </h1>
