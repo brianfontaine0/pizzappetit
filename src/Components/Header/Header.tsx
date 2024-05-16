@@ -1,11 +1,13 @@
 "use client";
 import useOpenMenu from "@front-end/src/Store/OpenMenu";
+import { useWalletStore } from "@front-end/src/Store/WalletStore";
 import Image from "next/image";
 import React, { useRef } from "react";
 
 function Header() {
   const { open } = useOpenMenu();
-
+  const { wallet } = useWalletStore();
+  
   const links = [
     { name: "Nous trouver", href: "#location" },
     // { name: "Menu", href: "#menu" },
@@ -25,6 +27,9 @@ function Header() {
             height={200}
           />
         </a>
+        <div className="flex items-center text-white">
+          <p>Cagnote : {wallet}€</p>
+        </div>
         <nav className="md:block hidden">
           <ul className="md:flex justify-between hidden space-x-4 items-center h-full">
             {links.map((link, index) => (

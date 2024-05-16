@@ -7,6 +7,7 @@ import ReservationSection from "@front-end/src/Components/Commons/ReservationSec
 import MobileBottomMenu from "@front-end/src/Components/Header/MobileBottomMenu";
 import ContactSection from "@front-end/src/Components/Commons/ContactSection";
 import dynamic from "next/dynamic";
+import SectionMenu from "@front-end/src/Components/Commons/SectionMenu";
 const LocationSection = dynamic(() => import("@front-end/src/Components/Commons/LocationSection"), {
   ssr: false,
 });
@@ -17,6 +18,8 @@ export default function Home() {
       <Header />
 
       <SectionFlottingLine />
+
+      <SectionMenu />
 
       <LocationSection />
 

@@ -1,8 +1,10 @@
 "use client";
+import { useWalletStore } from "@front-end/src/Store/WalletStore";
 import Image from "next/image";
 import React from "react";
 
 function SectionFlottingLine() {
+  const { setWallet, wallet } = useWalletStore();
   return (
     <section className="h-[calc(100vh-6rem)] bg-primary/95 relative" id="home">
       <div className="flex justify-between items-center">
@@ -16,12 +18,12 @@ function SectionFlottingLine() {
             authentique.
           </h2>
           <div className="flex mt-5">
-            {/* <a
+            <a
               href="#menu"
               className="bg-transparent text-white py-2 px-4 rounded-full hover:bg-opacity-80 m-2 border border-white"
             >
-              Voir le menu
-            </a> */}
+              Voir la carte
+            </a>
             <a
               href="#reservation"
               className="bg-secondary text-white py-2 px-4 rounded-full hover:bg-opacity-80 m-2"
